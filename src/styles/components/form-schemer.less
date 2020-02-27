@@ -1,0 +1,199 @@
+@import "../../styles/utils/index";
+@import "../fonts/iconfont.css";
+
+.form-schemer {
+  height: 640px;
+
+  .gd-tabs {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .gd-tabs-content {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .gd-tabs-pane {
+    height: 100%;
+  }
+
+  &-visual,
+  .vue-codemirror,
+  .CodeMirror {
+    height: 100%;
+  }
+
+  // 代码编辑器
+  .CodeMirror {
+    border: 1px dotted @border-color-light;
+  }
+
+  // 可视化模式
+  &-visual {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // 数据类型
+  &-type {
+    border-bottom: 1px solid @border-color-light;
+    padding: 0.8em 0;
+    background: @background-color-light;
+  }
+
+  // 数据类型项
+  .type-item {
+    .form-icon;
+    display: inline-block;
+    color: #505A6E;
+    padding: 0.5em 0.8em;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 0.5em;
+    }
+
+    &:before {
+      display: block;
+      font-size: 2em;
+      padding-bottom: 3px;
+    }
+
+    &:hover {
+      color: @primary-color;
+      background: fade(@primary-color, 10%);
+      box-shadow: 0 0 0 1px @primary-color inset;
+    }
+  }
+
+  // 工作区
+  &-work {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+
+    & > div {
+      height: 100%;
+      overflow: auto;
+      padding-top: 1em;
+    }
+  }
+
+  // 预览区
+  &-preview {
+    flex: 1;
+    border-right: 1px solid @border-color-light;
+    position: relative;
+    padding-right: 15px;
+
+    // 复写表单样式
+    .form-editor {
+      &-draggable {
+        & > .form-editor-item {
+          padding-top: 0.8em;
+          padding-bottom: 0.8em;
+
+          &:not(:last-of-type) {
+            margin-bottom: 0.5em;
+          }
+
+          &:hover {
+            background: fade(@primary-color, 10%);
+          }
+
+          &.active {
+            box-shadow: -2px 0 0 0 @primary-color inset;
+            background: fade(@primary-color, 10%);
+          }
+
+          & > .gd-form-item-content {
+            padding-right: 1.8em;
+          }
+        }
+
+        .form-schemer-tools {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+
+        // 删除图标
+        .field-delete-icon {
+          cursor: pointer;
+
+          &:hover {
+            color: @error-color;
+          }
+        }
+
+        // 空占位
+        &:empty {
+          &:before {
+            display: block;
+            content: '请点击数据类型, 或拖拽到此';
+            text-align: center;
+            padding-top: 200px;
+          }
+        }
+      }
+    }
+
+    & > .gd-button {
+      margin: 1em 0;
+    }
+  }
+
+  // 配置区
+  &-config {
+    width: 490px;
+    padding-left: 1em;
+  }
+
+  .form-icon-label {
+    &:before {
+      content: '标';
+      text-decoration: underline;
+      transform: scale(0.7, 0.7);
+    }
+  }
+}
+
+// 字段配置
+.field-config {
+  & > h3 {
+    margin-bottom: 1em;
+
+    &:not(:first-of-type) {
+      margin-top: 1.5em;
+    }
+  }
+
+  .gd-form-item {
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
+  }
+
+  &-form {
+    .gd-form-item.gd-form-item-required {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  .rule-item {
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
+
+    .gd-input {
+      margin-left: 0.6em;
+    }
+  }
+
+  .CodeMirror {
+    height: 310px;
+  }
+}

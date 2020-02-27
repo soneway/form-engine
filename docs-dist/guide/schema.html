@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>表单数据配置规范 | 表单引擎</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/form-engine/docs-dist/assets/css/0.styles.864f7b2c.css" as="style"><link rel="preload" href="/form-engine/docs-dist/assets/js/app.20ff86f6.js" as="script"><link rel="preload" href="/form-engine/docs-dist/assets/js/14.6f534b73.js" as="script"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/10.b052ddc0.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/11.6ae859cf.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/12.e390c8fb.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/13.da83fe8f.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/15.16f22b06.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/16.c784a25c.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/2.86a22dca.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/3.77cfa313.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/4.ae5ef6e8.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/5.fc71b28b.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/6.2bd85cfa.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/7.5cbbe6f7.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/8.e7c3a1f9.js"><link rel="prefetch" href="/form-engine/docs-dist/assets/js/9.e41b73a7.js">
+    <link rel="stylesheet" href="/form-engine/docs-dist/assets/css/0.styles.864f7b2c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/form-engine/docs-dist/" class="home-link router-link-active"><!----> <span class="site-name">表单引擎</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/form-engine/docs-dist/guide/start.html" class="nav-link">指南</a></div><div class="nav-item"><a href="https://github.com/soneway/form-engine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  访问github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://soneway.github.io/gdui2/docs-dist/guide/start.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  gdui2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/form-engine/docs-dist/guide/start.html" class="nav-link">指南</a></div><div class="nav-item"><a href="https://github.com/soneway/form-engine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  访问github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://soneway.github.io/gdui2/docs-dist/guide/start.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  gdui2
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>指南</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/form-engine/docs-dist/guide/start.html" class="sidebar-link">快速上手</a></li><li><a href="/form-engine/docs-dist/guide/schema.html" class="active sidebar-link">表单数据配置规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/form-engine/docs-dist/guide/schema.html#典型示例" class="sidebar-link">典型示例</a></li><li class="sidebar-sub-header"><a href="/form-engine/docs-dist/guide/schema.html#配置说明" class="sidebar-link">配置说明</a></li></ul></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>组件</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/form-engine/docs-dist/components/form-editor.html" class="sidebar-link">FormEditor 表单填写</a></li><li><a href="/form-engine/docs-dist/components/form-schemer.html" class="sidebar-link">FormSchemer 表单配置</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="表单数据配置规范"><a href="#表单数据配置规范" aria-hidden="true" class="header-anchor">#</a> 表单数据配置规范</h1> <h2 id="典型示例"><a href="#典型示例" aria-hidden="true" class="header-anchor">#</a> 典型示例</h2> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;field&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;type&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;label&quot;</span><span class="token operator">:</span> <span class="token string">&quot;label&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;placeholder&quot;</span><span class="token operator">:</span> <span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;required&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;不能为空&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^[a-z]+$&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;格式不符合正式表达式&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;min&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;字符长度必须大于{min}, 数字必须大于{min}&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;max&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;字符长度必须小于{max}, 数字必须小于{max}&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;len&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;字符长度必须等于{len}, 数字必须等于{len}, 数组长度必须等于{len}&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;depRules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;dep&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;opt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eq/lt/gt/lte/gte/in/reg&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;pattern&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^[a-z]+$&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;message&quot;</span><span class="token operator">:</span> <span class="token string">&quot;格式不符合正式表达式&quot;</span>        
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;depStyles&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;dep&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;opt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eq/lt/gt/lte/gte/in/reg&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;disabled&quot;</span>       
+      <span class="token punctuation">}</span>    
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="配置说明"><a href="#配置说明" aria-hidden="true" class="header-anchor">#</a> 配置说明</h2> <h3 id="field"><a href="#field" aria-hidden="true" class="header-anchor">#</a> field</h3> <ul><li>数据字段名称, 配置表单数据中包含的字段</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;age&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>以上配置可使表单产生数据: { name: value, age: value }</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/form-engine/docs-dist/guide/start.html" class="prev">
+          快速上手
+        </a></span> <span class="next"><a href="/form-engine/docs-dist/components/form-editor.html">
+          FormEditor 表单填写
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/form-engine/docs-dist/assets/js/app.20ff86f6.js" defer></script><script src="/form-engine/docs-dist/assets/js/14.6f534b73.js" defer></script>
+  </body>
+</html>

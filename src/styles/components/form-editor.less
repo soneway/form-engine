@@ -1,0 +1,120 @@
+@import "../../styles/utils/index";
+
+.form-editor {
+
+  // 数据添加项按钮
+  .add-icon {
+    cursor: pointer;
+    line-height: @input-height;
+
+    &:hover {
+      color: @success-color;
+    }
+  }
+
+  // 对象/数组中禁止多列显示
+  .object-wrapper,
+  .array-wrapper {
+
+    // 复写样式
+    .gd-col {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .gd-form-item {
+      float: none;
+      width: auto;
+    }
+  }
+
+  // 对象容器
+  .object-wrapper {
+    background: fade(#000, 3%);
+    padding: 1em;
+    padding-left: 3em;
+
+    &:after {
+      content: '⋯';
+    }
+
+    & > .form-editor-item {
+      display: none;
+    }
+
+    & > .object-toggle-icon {
+      position: absolute;
+      left: 1em;
+      color: #999;
+      transition: all 0.2s;
+      transform: rotate(-90deg);
+      cursor: pointer;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    // 展开状态
+    &.expand {
+
+      &:after {
+        display: none;
+      }
+
+      & > .form-editor-item {
+        display: flex;
+      }
+
+      & > .object-toggle-icon {
+        transform: none;
+      }
+    }
+
+    &:hover {
+      & + .array-delete-icon {
+        visibility: visible;
+      }
+    }
+  }
+
+  // 数组删除按钮
+  .array-delete-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    visibility: hidden;
+
+    &:hover {
+      visibility: visible;
+      color: @error-color;
+    }
+  }
+
+  // 只读/禁用状态
+  &-readonly,
+  &-disabled {
+    .array-wrapper {
+      // 隐藏数组添加/删除按钮
+      .add-icon,
+      .array-delete-icon {
+        display: none;
+      }
+    }
+  }
+
+  // 兼容IE9
+  .IE9 & {
+    // 对象容器
+    .object-wrapper {
+
+      // 展开状态
+      &.expand {
+        & > .form-editor-item {
+          display: block;
+        }
+      }
+    }
+  }
+}

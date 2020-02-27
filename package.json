@@ -1,0 +1,94 @@
+{
+  "name": "@soneway/form-engine",
+  "version": "1.2.0",
+  "title": "表单引擎",
+  "keywords": [
+    "vue",
+    "form",
+    "components"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "packages"
+  ],
+  "scripts": {
+    "up": "rm -rf node_modules && npm i",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "pack": "rm -rf docs-dist && npm run build && cd docs/.vuepress && mv dist ../../docs-dist",
+    "dist:css": "gulp --gulpfile build/build-style.js",
+    "dist:components": "webpack --config build/webpack.components.js",
+    "dist:utils": "webpack --config build/webpack.utils.js",
+    "dist:mixins": "webpack --config build/webpack.mixins.js",
+    "dist:index": "webpack --config build/webpack.index.js",
+    "dist:js": "npm run dist:components && npm run dist:index",
+    "dist": "rm -rf dist && npm run dist:css && npm run dist:js",
+    "pub": "npm run dist && npm publish --access public",
+    "pub:beta": "npm run dist && npm publish --tag beta --access public",
+    "lint": "eslint src --ext js,vue --fix",
+    "lint-staged": "lint-staged"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint src --ext js,vue --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soneway/form-engine"
+  },
+  "author": "soneway",
+  "license": "MIT",
+  "dependencies": {
+    "@soneway/gdui2": "latest",
+    "utils-lib": "latest",
+    "vue": "^2.6.10",
+    "vue-codemirror": "^4.0.6",
+    "vuedraggable": "^2.20.0"
+  },
+  "devDependencies": {
+    "@soneway/division": "latest",
+    "autoprefixer-loader": "3.2.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "10.0.1",
+    "babel-loader": "7.1.4",
+    "babel-plugin-syntax-jsx": "6.18.0",
+    "babel-plugin-transform-vue-jsx": "3.7.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-stage-2": "6.24.1",
+    "css-loader": "2.1.1",
+    "eslint": "5.8.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-node": "7.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0",
+    "eslint-plugin-vue": "5.2.2",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "5.0.0",
+    "gulp-clean-css": "3.10.0",
+    "gulp-less": "4.0.1",
+    "gulp-rename": "1.4.0",
+    "html-loader": "0.5.5",
+    "less": "3.9.0",
+    "less-loader": "4.1.0",
+    "lint-staged": "8.1.5",
+    "pre-commit": "1.2.2",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
+    "url-loader": "1.1.2",
+    "vue-loader": "14.2.4",
+    "vue-style-loader": "4.1.2",
+    "vue-template-compiler": "2.6.10",
+    "vuepress": "0.14.11",
+    "webpack": "4.31.0",
+    "webpack-cli": "3.3.2",
+    "webpack-merge": "4.2.1",
+    "webpack-node-externals": "1.7.2"
+  }
+}

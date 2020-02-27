@@ -1,0 +1,27 @@
+.form-editor-item {
+  // 标题类型
+  &-label {
+    &.gd-form-item {
+      margin-bottom: 1.2em;
+    }
+
+    .gd-form-item-label {
+      flex: 1;
+      padding-bottom: 1em;
+      border-bottom: 2px solid currentColor;
+      font-weight: bold;
+
+      & + .gd-form-item-content {
+        flex: 0;
+      }
+    }
+  }
+
+  .gd-check-list {
+    .gd-radio,
+    .gd-checkbox {
+      margin-top: 0.3em;
+      margin-bottom: 0.3em;
+    }
+  }
+}
