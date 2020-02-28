@@ -1,5 +1,5 @@
 # 介绍
-form-engine基于vue+gdui2, 为了解决各种各样的表单需求
+form-engine基于vue+gdui2, 可解决各种各样的表单需求, 编程中使用form-editor来实现表单需求, 代码量可减少60%左右
 
 ![image](images/jg.png)
 
@@ -35,3 +35,5 @@ Vue.use(formEngine);
 ```html
 <form-editor></form-editor>
 ```
+
+详情请参考: [form-engine文档](https://soneway.github.io/form-engine/docs-dist/guide/start.html)
